@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../jquery-1.10.2.min.js"></script>
+	<script src="../bootstrap.js"></script>
+	<link rel="stylesheet" href="../styles.css">
+	
+	<script src="../responsive-nav.js"></script>
+	<script src="../Chart.js"></script>
+	<style>
+		canvas{
+		}
+	</style>
+	</head>
+<body>
+	<div id="nav"> <!-- Only required for left/right tabs -->
+		<ul>
+			<li class="active"><a href="#Nav1" data-toggle="tab">配置与管理</a></li>
+			<li><a href="#Nav2" data-toggle="tab">资源调度管理</a></li>
+			<li><a href="#Nav3" data-toggle="tab">网络环境管理</a></li>
+			<li><a href="#Nav4" data-toggle="tab">任务无关性测试</a></li>
+<!--		
+    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+	-->
+		</ul>
+	</div>
+ 
+
+
+	<div role="main" class="main">
+		<a href="#nav" class="nav-toggle"></a>
+		<div class="tab-content">
+			<div class="tab-pane active" id="Nav1">
+				<p>I'm in Section 1.</p>
+			</div>
+			
+		
+			<div class="tab-pane" id="Nav2">
+				<p class="intro">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
+			</div>
+			
+			
+			<div class="tab-pane" id="Nav3">
+				<canvas id="canvas" height="450" width="450"></canvas>
+				<script>
+				var pieData = [
+					{
+						value: 30,
+						color:"#F38630"
+					},
+					{
+						value : 50,
+						color : "#E0E4CC"
+					},
+					{
+						value : 100,
+						color : "#69D2E7"
+					}
+			
+				];
+
+				var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData);
+	
+				</script>
+			</div>
+		</div>
+	</div>
+	<script>
+			var navigation = responsiveNav("#nav", {customToggle: ".nav-toggle"});
+	</script>
+</body>

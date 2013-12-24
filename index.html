@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>面向网络任务的虚拟环境系统</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="stylesheet" href="css/mul-navigation.css">
+	
+	<link rel="stylesheet" href="css/table.css" >
+	
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.hoveraccordion.js"></script>
+	
+	<script type="text/javascript" src="js/responsive-nav.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<style>
+			canvas{
+			}
+	</style>
+
+	
+</head>
+	
+<body>
+	<li><a>面向网络任务的虚拟环境系统</a></li>
+	<div id="nav">
+		
+		
+		
+		<li><a  data-toggle="tab">任务配置</a>
+			<ul>
+				<li><a href="#Nav2" data-toggle="tab">虚拟机资源</a></li>
+				<li><a href="#Nav2" data-toggle="tab">网络资源</a></li>
+			</ul>
+		</li>
+		<li><a data-toggle="tab">资源信息</a>
+			<ul>
+				<li><a href="#Nav2" data-toggle="tab">虚拟机资源</a></li>
+				<li><a href="#Nav2" data-toggle="tab">网络资源</a></li>
+			</ul>
+		</li>
+		
+		<li><a data-toggle="tab">调度信息</a>
+			<ul>
+				<li><a href="#Nav3" data-toggle="tab">虚拟机调度</a></li>
+				<li><a href="#Nav3" data-toggle="tab">网络调度</a></li>
+			</ul>
+		</li>
+		<li><a data-toggle="tab">综合展示</a>
+			<ul>
+				<li><a href="#Nav4" data-toggle="tab">结果查询</a></li>
+				<li><a href="#Nav4" data-toggle="tab">分析显示</a></li>
+			</ul>
+		</li>
+	
+	</div>
+		
+	<div role="main" class="main">
+		<a href="#nav" class="nav-toggle"></a>
+		<div class="tab-content">	
+			<div class="tab-pane active" id="Nav1">
+				<p>I'm in Section 1.</p>
+			</div>
+			
+			<div class="tab-pane" id="Nav2">
+				<p class="intro">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
+			</div>
+			
+			<div class="tab-pane" id="Nav3">
+				<canvas id="canvas" height="450" width="450"></canvas>
+				<script>
+
+					var pieData = [
+					{
+						value: 30,
+						color:"#F38630"
+					},
+					{
+						value : 50,
+						color : "#E0E4CC"
+					},
+					{
+						value : 100,
+						color : "#69D2E7"
+					}
+			
+					];
+
+				var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData);
+				</script>
+			</div>
+			
+			<div class="tab-pane" id="Nav4">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>
+							编号
+						</th>
+						<th>
+							产品
+						</th>
+						<th>
+							交付时间
+						</th>
+						<th>
+							状态
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Default
+						</td>
+					</tr>
+					<tr class="success">
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Approved
+						</td>
+					</tr>
+					<tr class="error">
+						<td>
+							2
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						<td>
+							Declined
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							3
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+						<td>
+							Pending
+						</td>
+					</tr>
+					<tr class="info">
+						<td>
+							4
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							04/04/2012
+						</td>
+						<td>
+							Call in to confirm
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			
+		</div>
+	</div>
+	<!--{customToggle: ".nav-collapse"}-->
+	<script>
+		$(document).ready(function () {
+            // Setup HoverAccordion for Example 1
+            $('#nav').hoverAccordion();
+        });
+		var navigation = responsiveNav("#nav",{customToggle: ".nav-toggle"});
+	</script>
+
+</body>
+</html>
